@@ -1,25 +1,38 @@
+<!--
+ * @Date: 2020-06-15 10:00:59
+ * @LastEditors: 曾令宇
+ * @LastEditTime: 2020-06-15 10:49:24
+ * @FilePath: \element-dynamic-form-item\src\App.vue
+--> 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <img src="./assets/logo.png">
+    <div>
+      <p>
+        If Element is successfully added to this project, you'll see an
+        <code v-text="'<el-button>'"></code>
+        below
+      </p>
+      <el-button>el-button</el-button>
+    </div>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import HelloWorld from './components/HelloWorld.vue'
 
-@Component({
+export default {
+  name: 'app',
   components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+    HelloWorld
+  }
+}
 </script>
 
-<style lang="less">
+<style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
