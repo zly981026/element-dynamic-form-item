@@ -5,8 +5,8 @@ name: Node.js Package
 
 on:
   push:
-    branches: 
-      -master
+    branches:
+      - master
 
 jobs:
   build:
@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - run: yarn lib
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

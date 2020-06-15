@@ -1,9 +1,16 @@
 {
   "name": "element-dynamic-form-item",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
-  "main": "dist/element-dynamic-form-item.js",
+  "main": "lib/element-dynamic-form-item.umd.min.js",
   "author": "Diaz Zeng",
+  "license": "MIT",
+  "homepage": "https://github.com/zly981026/element-dynamic-form-item",
+  "keywords": [
+    "dynamic",
+    "form",
+    "element"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
