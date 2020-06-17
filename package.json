@@ -1,6 +1,6 @@
 {
   "name": "element-dynamic-form-item",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "lib/element-dynamic-form-item.umd.min.js",
   "author": "Diaz Zeng",
