@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-06-15 10:05:10
  * @LastEditors: 曾令宇
- * @LastEditTime: 2020-06-15 15:58:56
+ * @LastEditTime: 2020-06-17 13:24:01
  * @FilePath: \element-dynamic-form-item\src\packages\dynamic-form-item\ElDynamicFormItem.vue
 --> 
 <template>
@@ -16,6 +16,14 @@
     <el-input
       v-else-if="type === 'string'"
       type="text"
+      size="small"
+      :value="value"
+      @input="onValueChange"
+    />
+    <el-input
+      v-else-if="type === 'textarea'"
+      type="textarea"
+      :rows="rows"
       size="small"
       :value="value"
       @input="onValueChange"
@@ -40,12 +48,13 @@
         :on-change="onFileChange"
         :show-file-list="false"
         class="upload-btn"
+        :auto-upload="false"
         action
         :multiple="false"
       >
         <el-button slot="trigger" size="small" type="primary">upload</el-button>
       </el-upload>
-      <p class="file-name">{{getFileName()}}</p>
+      <p class="file-name">{{getFileName}}</p>
     </div>
   </el-form-item>
 </template>
@@ -73,6 +82,9 @@ export default class ElDynamicFormItem extends VuePluginComponent {
   @Prop()
   type!: string;
 
+  @Prop({ default: 6 })
+  rows!: number;
+
   @Emit("on-change")
   private onValueChange(
     val: string | boolean | number | Date
@@ -92,14 +104,18 @@ export default class ElDynamicFormItem extends VuePluginComponent {
     }
   }
 
-  private fileValue!: File;
+  fileValue: File | null = null;
 
   @Emit("on-file-change")
-  onFileChange(val: File) {
-    return (this.fileValue = val);
+  onFileChange(val: File, list: FileList): File {
+    console.log(val);
+    console.log(list);
+
+    this.fileValue = val;
+    return this.fileValue;
   }
 
-  private getFileName(): string {
+  get getFileName(): string {
     return this.fileValue?.name ?? "";
   }
 }

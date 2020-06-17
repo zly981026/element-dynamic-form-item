@@ -1,0 +1,22 @@
+/*
+ * @Date: 2020-06-17 13:45:17
+ * @LastEditors: 曾令宇
+ * @LastEditTime: 2020-06-17 14:12:15
+ * @FilePath: \element-dynamic-form-item\vue.config.ts
+ */
+module.exports = {
+    chainWebpack: config => {
+        config.module
+            .rule('ts')
+            .use('ts-loader')
+            .loader('ts-loader')
+            .tap(opts => {
+                opts.transpileOnly = false;
+                opts.happyPackMode = false;
+                return {
+                    ...opts,
+                    "transpileOnly": false
+                };
+            });
+    }
+}

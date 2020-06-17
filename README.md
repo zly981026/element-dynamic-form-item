@@ -1,24 +1,13 @@
 # element-dynamic-form-item
 
-## Project setup
-```
-yarn install
-```
+## 基于element-ui的动态表单项组件
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+- ### 安装
 
-### Compiles and minifies for production
-```
-yarn build
-```
+  ``` bash
+  yarn add element-dynamic-form-item
+  ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+- ## 引用
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  
