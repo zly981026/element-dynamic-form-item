@@ -1,11 +1,11 @@
 <!--
  * @Date: 2020-06-15 10:05:10
  * @LastEditors: 曾令宇
- * @LastEditTime: 2020-06-17 13:24:01
- * @FilePath: \element-dynamic-form-item\src\packages\dynamic-form-item\ElDynamicFormItem.vue
+ * @LastEditTime: 2020-06-17 18:20:54
+ * @FilePath: \element-dynamic-form-item\packages\dynamic-form-item\DynamicFormItem.vue
 --> 
 <template>
-  <el-form-item :label="label" class="el-dynamic-form-item">
+  <el-form-item :label="label" :label-width="labelWidth" class="el-dynamic-form-item">
     <el-input
       v-if="type === 'int'"
       type="number"
@@ -74,6 +74,9 @@ Vue.use(DatePicker);
 export default class ElDynamicFormItem extends VuePluginComponent {
   @Prop()
   label!: string;
+
+  @Prop({ default: "150px" })
+  labelWidth!: string;
 
   @Prop()
   @Model("on-change")

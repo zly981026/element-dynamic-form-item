@@ -2,6 +2,7 @@ import Vue from "vue";
 import { VuePluginComponent } from "../vue-plugin-component";
 export default class ElDynamicFormItem extends VuePluginComponent {
     label: string;
+    labelWidth: string;
     value: string | boolean | number | Date;
     type: string;
     rows: number;
