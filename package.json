@@ -2,7 +2,7 @@
   "name": "element-dynamic-form-item",
   "version": "0.1.7",
   "private": false,
-  "main": "lib/element-dynamic-form-item.umd.min.js",
+  "main": "lib/element-dynamic-form-item.common.js",
   "author": "Diaz Zeng",
   "license": "MIT",
   "homepage": "https://github.com/zly981026/element-dynamic-form-item",
