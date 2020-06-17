@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-06-15 10:00:59
  * @LastEditors: 曾令宇
- * @LastEditTime: 2020-06-17 15:36:32
+ * @LastEditTime: 2020-06-17 17:26:03
  * @FilePath: \element-dynamic-form-item\src\components\HelloWorld.vue
 --> 
 <template>
@@ -19,8 +19,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { DynamicFormItem } from "../packages/dynamic-form-item";
-Vue.use(DynamicFormItem);
 import { Form } from "element-ui";
 Vue.use(Form);
 @Component

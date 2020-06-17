@@ -14,14 +14,15 @@
   "files": [
     "types",
     "lib",
-    "src"
+    "src",
+    "packages"
   ],
   "typings": "types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name element-dynamic-form-item --dest lib ./src/packages/index.ts"
+    "lib": "vue-cli-service build --target lib --name element-dynamic-form-item --dest lib ./packages/index.ts"
   },
   "dependencies": {
     "core-js": "^3.6.5",

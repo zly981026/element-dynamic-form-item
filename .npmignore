@@ -24,8 +24,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
-
-# /src
 /.github
 /dist
 /node_modules
@@ -37,4 +35,3 @@ yarn-error.log*
 /vue.config.js*
 /config
 /yarn.lock
-# packages/
